@@ -40,7 +40,7 @@ const App = () => {
               setMustSpin(false);
             }}
           />
-          <button onClick={handleSpinClick}>SPIN</button>
+          <button onClick={handleSpinClick} className='text-white'>SPIN</button>
         </div>
       </section>
     </>
