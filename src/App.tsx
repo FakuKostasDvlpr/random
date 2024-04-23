@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { Wheel } from 'react-custom-roulette';
 import confetti from 'canvas-confetti'; // Importa la función confetti
 
-const App = () => {
-  const [mustSpin, setMustSpin] = useState(false);
-  const [prizeNumber, setPrizeNumber] = useState(0);
-  const [option1, setOption1] = useState('Option 1');
-  const [option2, setOption2] = useState('Option 2');
+const App: React.FC = () => {
+  const [mustSpin, setMustSpin] = useState<boolean>(false);
+  const [prizeNumber, setPrizeNumber] = useState<number>(0);
+  const [option1, setOption1] = useState<string>('Option 1');
+  const [option2, setOption2] = useState<string>('Option 2');
 
   const handleSpinClick = () => {
     if (!mustSpin) {
@@ -16,7 +16,7 @@ const App = () => {
     }
   };
 
-  const handleButtonClick = (option) => {
+  const handleButtonClick = (option: string) => {
     // Llama a la función confetti cuando se selecciona una opción
     confetti({
       particleCount: 100, // Número de confeti
@@ -26,7 +26,7 @@ const App = () => {
     console.log(`Seleccionaste: ${option}`);
   };
 
-  const updateOption = (index, value) => {
+  const updateOption = (index: number, value: string) => {
     if (index === 1) {
       setOption1(value);
     } else {
