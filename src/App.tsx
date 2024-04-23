@@ -4,8 +4,8 @@ import { Wheel } from 'react-custom-roulette';
 const App: React.FC = () => {
   const [mustSpin, setMustSpin] = useState<boolean>(false);
   const [prizeNumber, setPrizeNumber] = useState<number>(0);
-  const [option1, setOption1] = useState<string>('Weed ');
-  const [option2, setOption2] = useState<string>('Sleep');
+  const [option1,] = useState<string>('Weed ');
+  const [option2,] = useState<string>('Sleep');
 
   const handleSpinClick = () => {
     if (!mustSpin) {
@@ -16,13 +16,6 @@ const App: React.FC = () => {
   };
 
 
-  const updateOption = (index: number, value: string) => {
-    if (index === 1) {
-      setOption1(value);
-    } else {
-      setOption2(value);
-    }
-  };
 
   const data = [
     { option: option1 },
