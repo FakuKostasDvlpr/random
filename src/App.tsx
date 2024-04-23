@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Wheel } from 'react-custom-roulette';
-import confetti from 'canvas-confetti'; // Importa la función confetti
 
 const App: React.FC = () => {
   const [mustSpin, setMustSpin] = useState<boolean>(false);
   const [prizeNumber, setPrizeNumber] = useState<number>(0);
-  const [option1, setOption1] = useState<string>('Option 1');
-  const [option2, setOption2] = useState<string>('Option 2');
+  const [option1, setOption1] = useState<string>('Weed ');
+  const [option2, setOption2] = useState<string>('Sleep');
 
   const handleSpinClick = () => {
     if (!mustSpin) {
