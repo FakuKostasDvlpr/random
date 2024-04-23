@@ -15,15 +15,6 @@ const App: React.FC = () => {
     }
   };
 
-  const handleButtonClick = (option: string) => {
-    // Llama a la función confetti cuando se selecciona una opción
-    confetti({
-      particleCount: 100, // Número de confeti
-      spread: 360, // Extensión del área de dispersión
-      origin: { x: 0.5, y: 0.5 } // Origen del confeti en la pantalla
-    });
-    console.log(`Seleccionaste: ${option}`);
-  };
 
   const updateOption = (index: number, value: string) => {
     if (index === 1) {
@@ -43,14 +34,6 @@ const App: React.FC = () => {
       <section className='w-full h-full mt-20 text-gray'>
         <div className='flex justify-center text-5xl'>
           <h1 className='text-gray-100 font-extralight'>Tenes que elegir entre</h1>
-        </div>
-        <div className='flex mt-3 flex-row items-center justify-center gap-10'>
-          <div>
-            <p className='mt-10'><button onClick={() => handleButtonClick(option1)}>WID MOMENT?</button></p>
-          </div>
-          <div>
-            <p className='mt-10'><button onClick={() => handleButtonClick(option2)}>Sleep moment?</button></p>
-          </div>
         </div>
         <div className='flex items-center justify-center flex-col mt-20'>
           <Wheel
